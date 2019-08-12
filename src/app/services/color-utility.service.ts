@@ -31,15 +31,6 @@ export class ColorUtilityService {
 		colorPaletteCSS += ('</style>');
 		jQuery(colorPaletteCSS).appendTo('head');
 	}
-
-  public removeStyleSheets(styleUrls: string[]) {
-		for (let i = 0; i < styleUrls.length; i++) {
-			if (document.getElementById('custom-style' + i)) {
-				// remove element
-				jQuery('link[title="custom-st yle' + i + '"]').remove();
-			}
-		}
-  }
   
   private buildBackgroundColors(colorPalette: PartnerColorPalette): string {
 		const backgroundStyles = '' +
